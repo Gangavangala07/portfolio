@@ -1,0 +1,114 @@
+
+
+  <!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ganga's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+     <div class="header-left">
+      <div class="greeting-section">
+        <p class="greeting">Hi There,</p>
+        <h1 class="name">
+          I am <span class="highlight">Ganga Vangala</span>
+        </h1>
+        <p class="subtitle">B.Tech 3rd Year Student | Web Developer</p>
+      </div>
+
+      <nav>
+        <div class="nav-links">
+          <a href="#about" class="active">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+
+     <div class="header-right">
+      <img src="images/photo.jpg" alt="Profile Picture" class="profile-img" />
+    </div>
+  </div>
+</header>
+
+
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hello! I'm Ganga, a passionate Computer Science Engineering student, currently in my 3rd year. I enjoy designing and developing full-stack web applications, and I'm experienced in the MERN stack, Python, and frontend frameworks like Bootstrap. I believe in creating efficient and user-friendly applications that make a difference.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>MERN Stack (MongoDB, Express.js, React.js, Node.js)</li>
+        <li>MIT App Inventor</li>
+        <li>Bootstrap Framework</li>
+        <li>HTML & CSS</li>
+        <li>Basic DevOps Concepts</li>
+        <li>Python Programming</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>My Projects</h2>
+      <ul class="projects-list">
+        <li><strong>HealthConnect:</strong> A hospital management web application.</li>
+        <li><strong>Kits-Lets Save:</strong> A savings-focused app developed in MIT App Inventor.</li>
+        <li><strong>Personal Portfolio:</strong> This responsive portfolio website!</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/your_form_id_here" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+```
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+```
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ganga. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const navLinks = document.querySelectorAll("header nav a");
+    window.addEventListener("scroll", () => {
+      let fromTop = window.scrollY + 80;
+      navLinks.forEach(link => {
+        const section = document.querySelector(link.hash);
+        if (section && section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+          navLinks.forEach(l => l.classList.remove("active"));
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

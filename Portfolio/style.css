@@ -1,0 +1,292 @@
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- Your Original Styles (unchanged) --- */
+
+body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  color: #333;
+  background-color: #f5f7fa;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px 0;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+ 
+  top: 0;
+  z-index: 100;
+}
+
+/* --- Modified Header Content: flex container with left and right sides --- */
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 40px;
+}
+
+/* Left side: greetings + nav */
+.header-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Header Title */
+.header-left h1 {
+  font-size: 2.0rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  gap: 20px;
+  font-family: 'Segoe UI Black', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Nav inside header-left */
+.header-left nav {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  font-weight: 600;
+  flex-wrap: nowrap;
+  margin-top: 10px;
+
+}
+
+
+.header-left nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.header-left nav a:hover,
+.header-left nav a.active {
+  color: #ffb600;
+  border-bottom-color: #ffb600;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Right side: image */
+.image-section {
+  flex: 0 0 300px; /* fixed width */
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Profile Image */
+.profile-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 0;
+  object-fit: cover;
+  border: 3px solid #090909;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* --- Rest of your original styles --- */
+
+h2 {
+  font-size: 2.4rem;
+  margin-bottom: 25px;
+  color: #212529;
+  text-align: center;
+  font-weight: 600;
+}
+
+section p {
+  max-width: 650px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.8;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 650px;
+  margin: 0 auto 40px;
+}
+
+.skills-list li,
+.projects-list li {
+  background: #fff;
+  padding: 18px;
+  margin: 12px 0;
+  border-left: 5px solid #212529;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: default;
+}
+
+.skills-list li:hover,
+.projects-list li:hover {
+  transform: translateX(6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+form {
+  background: #fff;
+  padding: 28px;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  max-width: 650px;
+  margin: 0 auto 40px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #212529;
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 14px 16px;
+  margin: 8px 0 22px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ffc107;
+  box-shadow: 0 0 8px rgba(255, 193, 7, 0.4);
+}
+
+button[type="submit"] {
+  background-color: #212529;
+  color: #fff;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(33, 37, 41, 0.3);
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+button[type="submit"]:hover {
+  background-color: #ffc107;
+  color: #212529;
+  box-shadow: 0 6px 18px rgba(255, 193, 7, 0.6);
+}
+
+footer {
+  background-color: #212529;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 40px;
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+footer p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-left nav {
+    margin-top: 15px;
+    justify-content: center;
+  }
+
+  .header-left nav a {
+    margin: 0 10px;
+  }
+
+  .image-section {
+    margin-top: 20px;
+    flex: none;
+    justify-content: center;
+  }
+
+  .profile-img {
+    max-width: 200px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  section p,
+  ul,
+  form {
+    width: 90%;
+    margin: 0 auto 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-left h1 {
+    font-size: 1.8rem;
+  }
+
+  .header-left nav a {
+    font-size: 1rem;
+  }
+}
